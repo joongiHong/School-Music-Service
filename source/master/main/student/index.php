@@ -19,12 +19,12 @@
         ?>
         <header>
             <ul>
-                <li title="메인"><a href="index.php"><span style="color: gray;"><i class="fas fa-home fa-3x"></i></span></a></li>
-                <li title="신청 목록"><a href="music/index.php"><span style="color: gray;"><i class="fas fa-music fa-3x"></i></span></a></li>
-                <li title="관리자 관리"><a href="user/index.php"><span style="color: gray;"><i class="fas fa-user-check fa-3x"></i></span></a></li>
-                <li title="학생 관리"><a href="student/index.php"><span style="color: gray;"><i class="fas fa-user-graduate fa-3x"></i></span></a></li>
-                <li title="글쓰기"><a href="write/index.php"><span style="color: gray;"><i class="fas fa-pen fa-3x"></i></span></a></li>
-                <li title="로그아웃"><a href="logout.php"><span style="color: gray;"><i class="fas fa-sign-out-alt fa-3x"></i></span></a></li>
+                <li title="메인"><a href="index.html"><span style="color: gray;"><i class="fas fa-home fa-3x"></i></span></a></li>
+                <li title="신청 목록"><a href="music/index.html"><span style="color: gray;"><i class="fas fa-music fa-3x"></i></span></a></li>
+                <li title="관리자 관리"><a href="user/index.html"><span style="color: gray;"><i class="fas fa-user-check fa-3x"></i></span></a></li>
+                <li title="학생 관리"><a href="student/index.html"><span style="color: gray;"><i class="fas fa-user-graduate fa-3x"></i></span></a></li>
+                <li title="글쓰기"><a href="write/index.html"><span style="color: gray;"><i class="fas fa-pen fa-3x"></i></span></a></li>
+                <li title="로그아웃"><a href="../logout.php"><span style="color: gray;"><i class="fas fa-sign-out-alt fa-3x"></i></span></a></li>
             </ul>
         </header>
         <div id="main">

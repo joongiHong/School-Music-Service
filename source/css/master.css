@@ -1,3 +1,46 @@
+/* 폰트 선언 */
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+* { 
+    font-family: 'Nanum Gothic', 'Sans-serif'; 
+}
+
+/* a 효과 제거 */
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* 보더, 마진 제로 */
+
+body {
+    border: 0;
+    margin: 0;
+    background-color: #F29661;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
 #box {
   position: absolute;
   top: 0;
@@ -10,4 +53,26 @@
   margin: auto;
   padding: 20px;
   text-align: center;
+}
+
+/* 메뉴 */
+header > ul {
+  position: fixed;
+}
+
+header > ul > li {
+  list-style: none;
+  padding: 10px;
+  width: 60px;
+  background-color: white;
+  text-align: center;
+}
+
+header > ul > li:hover {
+  background-color: aquamarine;
+}
+
+/* 메인 */
+#main {
+  padding: 30px 150px;
 }

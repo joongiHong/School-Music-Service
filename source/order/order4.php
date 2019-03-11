@@ -4,7 +4,7 @@ $singer=$_POST['singer'];
 $album=$_POST['album'];
 
 $con=mysqli_connect("127.0.0.1", "root", "*******", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");
-$sql ="INSERT INTO music VALUES (DEFAULT,'".$music."','".$singer."','".$album."','O');";
+$sql ="INSERT INTO music (name, singer, album, sf, time) VALUES ('".$music."','".$singer."','".$album."','O', DEFAULT);";
 $ret = mysqli_query($con, $sql);
 
 if($ret) {
