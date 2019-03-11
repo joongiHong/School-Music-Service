@@ -40,3 +40,26 @@
   appearance: none;
   padding: 10px;
 }
+
+
+.textbox3 {
+  padding: 10px;
+}
+
+.textbox3 > label {
+  color: gray;
+}
+
+.textbox3 > input {
+  width: 20%;
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid gray;
+  background-color: #F29661;
+  border-radius: 0;
+  outline-style: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+}
