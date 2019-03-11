@@ -1,19 +1,19 @@
 <?php
-$snum=$_POST['studentnum'];
-$sname=$_POST['studentname'];
+$num=$_POST['studentnum'];
+$pass=$_POST['password'];
 
 $con=mysqli_connect("127.0.0.1", "root", "*******", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");
-$sql ="SELECT * FROM studentdoc WHERE snum=".$snum." AND sname='".$sname."';";
+$sql ="SELECT * FROM master WHERE num=".$num." AND pass='".$pass."';";
 $ret = mysqli_query($con, $sql);
 if($ret) {
     $count = mysqli_num_rows($ret);
     if($count==1) {
         session_start();
-        $_SESSION['id'] = $snum;
-        echo "<script>window.location.href = 'order3.php';</script>";
+        $_SESSION['snum'] = $num;
+        echo "<script>window.location.href = 'main/index.php';</script>";
         exit;
     }else{
-        echo "<script>alert('학번이나 이름이 등록되지 않았습니다.');</script>";
+        echo "<script>alert('로그인에 실패하였습니다.');</script>";
         echo "<script>history.back();</script>";
         exit;
     }

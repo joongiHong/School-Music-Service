@@ -8,6 +8,8 @@ $sql ="INSERT INTO music VALUES (DEFAULT,'".$music."','".$singer."','".$album."'
 $ret = mysqli_query($con, $sql);
 
 if($ret) {
+    session_start();
+    session_destroy();
     echo "<script>window.location.href = 'order5.html';</script>";
 }
 else {
