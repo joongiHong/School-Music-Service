@@ -83,7 +83,7 @@
                     <td><?php echo $row['num']?></td>
                     <td><?php echo $row['type']?></td>
                     <td><a href="../../../student/view.php?num=<?php echo $row['num']?>"><?php echo $row['title']?></a></td>
-                    <td><a href="update.php?num=<?php echo $row['num']?>">수정</a> | <a href="delete.php?num=<?php echo $row['num']?>">삭제</a></td> 
+                    <td><a href="update.php?num=<?php echo $row['num']?>" onclick="window.open(this.href, '_blank', 'width=800px,height=500px,toolbars=no,scrollbars=no'); return false;">수정</a> | <a href="delete.php?num=<?php echo $row['num']?>">삭제</a></td> 
                 </tr>
 
                 <?php
@@ -91,6 +91,7 @@
                 ?>
             </table>
             <a href="write.php" onclick="window.open(this.href, '_blank', 'width=800px,height=500px,toolbars=no,scrollbars=no'); return false;"><button style="font-size:15px;">글쓰기</button></a>
+            <a href="clean.php" onclick="window.open(this.href, '_blank', 'width=800px,height=500px,toolbars=no,scrollbars=no'); return false;"><button style="font-size:15px;">순번 초기화</button></a>
         </div>
     </body>
 </html>
