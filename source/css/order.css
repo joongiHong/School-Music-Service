@@ -1,0 +1,19 @@
+/* div1 */
+
+#div_1 {
+    background-image: url(../img/background/body_2.jpg);
+    width: 100%;
+}
+
+#div_1 > h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 100px;
+    color: white;
+}
+
+/* div2 */
+
+#div_2 {
+    padding: 50px;
+}

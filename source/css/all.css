@@ -18,6 +18,40 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+/* 헤더 */
+
+header {
+    background-color: #F29661;
+    width: 100%;
+    display: inline-block;
+    height: 150px;
+}
+
+header > ul > li {
+    list-style: none;
+    font-size: 30px;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    color: black;
+}
+
+#logo {
+    float: left;
+    margin: 0;
+}
+
+#menu {
+    float: right;
+    margin: 25px;
+}
+
+#menu:hover {
+    background-color: white;
+    display: inline-block;
+}
+
 /* a 효과 제거 */
 
 a {

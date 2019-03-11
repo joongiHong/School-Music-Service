@@ -1,20 +1,73 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>고창중학교 음악 신청 서비스</title>
+        <title>고창중학교 음악 신청 서비스 - 음악신청</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/all.css" type="text/css">
-        <link rel="stylesheet" href="../css/main.css" type="text/css">
         <link rel="stylesheet" href="../css/button.css" type="text/css">
+        <link rel="stylesheet" href="../css/order.css" type="text/css">
+        <script language="JavaScript" type="text/JavaScript">
+            function agree(){
+                var yn=window.confirm('개인정보 처리 방침에 동의하신 것으로 간주하고\n가입을 진행합니다.');
+                if(yn==true) {
+                    location.href="order1.html";
+                }
+                else {
+                    alert("미 동의시 본인인증이 불가능하여\n신청이 어렵습니다.")
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
             <ul>
-                <li id="logo"><img src="../img/logo/logo.png" alt="고창중학교 방송부" width="350"/></li>
+                <li id="logo"><a href="../index.html"><img src="../img/logo/logo.png" alt="고창중학교 방송부" width="350"/></a></li>
                 <li id="menu"><a href="student/index.html">학생 센터</a></li>
                 <li id="menu"><a href="check/index.html">선정 확인</a></li>
-                <li id="menu"><a href="order/index.html">음악 신청</a></li>
+                <li id="menu"><a href="">음악 신청</a></li>
             </ul>
         </header>
+        <div id="div_1">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>음악 신청</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div id="div_2">
+            <h1>학생 본인인증</h1>
+            <p>고창중 학생 여부를 확인하기 위해 학생 본인인증 절차를 진행합니다.</p>
+            <br>
+            <hr>
+            <br>
+            <h3>개인정보 처리 방침</h3>
+            <br>
+            <textarea readonly style="width: 100%; height: 300px; resize: none;">
+안내 : 본 이용약관은 각 학교에서 수정하여 사용하시기 바랍니다.
+
+※ 개인정보 처리 방침 ※
+
+- 개인정보 처리 내역
+1. 수집이용목적 : 고내 방송 선호 음악 신청 민원 처리 및 통지
+2. 수집항목 : 학번, 성명
+3. 이용 및 보유기간 : 본인인증 후 즉시 파기
+4. 동의를 거부할 수 있으며, 동의를 거부하시는 경우 본인인증이 불가하여 신청이 불가능 합니다.
+
+- 개인정보 보호 책임자
+1. 이름 : OOO
+2. 직책 : 방송부 총괄 선생 겸 교무부장
+3. 연락처 : 010-0000-0000
+4. 민원 고충이 발생할 경우 본 연락처나 학교로 연락주십시오.
+            </textarea>
+            <button class="btn-1" onclick="agree()">인증하기 (동의)</button>
+        </div>
     </body>
 </html>
