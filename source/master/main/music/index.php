@@ -85,7 +85,7 @@
                 
                 <tr>
                     <td><?php echo $row['number']?></td>
-                    <td><?php echo $row['name']?></td>
+                    <td><a href="https://music.bugs.co.kr/search/integrated?q=<?php echo $row['name']?>" target="_blank"><?php echo $row['name']?></a></td>
                     <td><?php echo $row['singer']?></td>
                     <td><?php echo $row['album']?></td>
                     <td><a href="y.php?number=<?php echo $row['number']?>">선정</a> | <a href="n.php?number=<?php echo $row['number']?>">탈락</a></td> 

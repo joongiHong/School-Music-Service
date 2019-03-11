@@ -55,7 +55,7 @@
             </ul>
         </header>
         <div id="main">
-            <h1 style="font-size: 70px;">관리자 관리</h1>
+        <h1 style="font-size: 70px;">관리자 관리</h1>
             <br>
             <h3>음악 신청 서비스의 전반적인 기능을 관리할 수 있는 관리자 권환 설정 기능입니다.</h3>
             <br>
