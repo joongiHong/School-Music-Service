@@ -17,7 +17,7 @@ if($ret) {
     exit;
 }
 
-$con=mysqli_connect("127.0.0.1", "root", "*******s", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");
+$con=mysqli_connect("127.0.0.1", "root", "*******", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");
 $sql ="SELECT * FROM music WHERE name='".$music."' AND singer='".$singer."' AND sf='O';";
 $ret = mysqli_query($con, $sql);
 if($ret) {
