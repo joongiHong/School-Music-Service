@@ -35,9 +35,9 @@
 전문가와 함께 진행하셔야 보다 빠르게 하실 수 있습니다.<br>
 
 #### 1. 기본설치
-※ 본 설치는 직접 서버 설치가 아닌, 호스팅 업체를 통한 서버 설치일 경우 필요 없습니다. ※
-※ 본 설치 방법은 우분투 서버 기준으로, 타 서버 OS이거나 버전에 따라 상이할 수 있습니다. ※
-※ 본 설치 과정은 모두 우분투의 터미널 기반으로 진행됩니다. 어려울 경우 대행사를 이용하십시오. ※
+※ 본 설치는 직접 서버 설치가 아닌, 호스팅 업체를 통한 서버 설치일 경우 필요 없습니다. ※<br>
+※ 본 설치 방법은 우분투 서버 기준으로, 타 서버 OS이거나 버전에 따라 상이할 수 있습니다. ※<br>
+※ 본 설치 과정은 모두 우분투의 터미널 기반으로 진행됩니다. 어려울 경우 대행사를 이용하십시오. ※<br>
 
 1. Apache2 웹서버 설치
 <pre><code>$ sudo apt update && sudo apt upgrade</code></pre>
@@ -80,12 +80,13 @@ Mysql의 root 암호는 추후 관리자 추가 등에 사용됩니다.
 <pre><code>$ sudo nano /var/www/html/info.php</code></pre>
 본 명령어를 통해 info.php를 최상위 링크에서 엽니다.
 
-<pre><code><?php phpinfo(); ?></code></pre>
+<pre><code>&#60;?php phpinfo(); ?&#62;</code></pre>
 본 명령어를 info.php에 입력하여 info.php에 php정보창을 띄웁니다.
 
 #### 2. mysql 관리자 생성
 본 단계를 통하여 각종 셀 입력용 관리자를 생성해야 서버 보안 관리에 안전합니다.<br>
-본 과정에선 생성한 입력(insert) 권환 관리자와 출력(select) 관한 관리자를 추후 4단계에서 권환을 제공합니다.
+본 과정에선 생성한 입력(insert) 권환 관리자와 출력(select) 관한 관리자를 추후 4단계에서 권환을 제공합니다.<br>
+혹시 호스팅 업체에서 관리자 생성 권환 없이 계정 하나만을 제공할 경우 해당 계정과 비밀번호를 5단계에 입력하세요.
 
 <pre><code>mysql -u root -p</code></pre>
 본 명령어를 통해 mysql에 루트 권환으로 로그인 합니다.
@@ -98,3 +99,50 @@ Mysql의 root 암호는 추후 관리자 추가 등에 사용됩니다.
 
 <pre><code>CREATE user '아이디'@% identified by '비밀번호';</code></pre>
 본 명령어를 통해 방금 전에 생성한 관리자가 외부에서 접속할 수 있도록 설정을 변경합니다.
+
+
+#### 3. mysql 테이블 생성
+본 단계를 통하여 각종 정보를 업로드 할 테이블을 생성합니다.<br>
+본 과정은 본 프로그램이 동작할 수 있는 배경을 제공하는 것으로 매우 중요하니 잘 따라주시기 바랍니다.
+
+<pre><code>CRATE DATABASE broadcasting default CHARACTER SET UTF8;</code></pre>
+본 명령어를 통해 mysql에 broadcasting이라는 이름을 가진 데이터베이스를 생성합니다.<br>
+혹시 호스팅 업체에서 데이터베이스 생성 권환을 생성하지 않는 경우 기존에 생성되어 있는 데이터베이스를 사용하시기 바랍니다.
+
+<pre><code>CRATE TABLE studentdoc (<br>
+           snum INT(10),<br>
+           sname VARCHAR(15),<br>
+           PRIMARY KEY(snum)<br>
+);</code></pre>
+본 명령어를 통해 mysql에 학생 정보를 저장하는 studentdoc 테이블을 생성합니다.<br>
+본 테이블에는 학생 정보가 저장됩니다. 기억하시기 바랍니다.
+
+<pre><code>CRATE TABLE music (<br>
+           number INT AUTO_INCREMENT,<br>
+           name VARCHAR(50),<br>
+           singer VARCHAR(50),<br>
+           album VARCHAR(50),<br>
+           sf VARCHAR(5),<br>
+           time TIMESTAMP DEFAULT NOW(),<br>
+           PRIMARY KEY(number)<br>
+);</code></pre>
+본 명령어를 통해 mysql에 학생들이 신청한 음악의 정보를 저장하는 music 테이블을 생성합니다.<br>
+본 테이블에는 신청한 음악 정보가 저장됩니다. 기억하시기 바랍니다.
+
+<pre><code>CRATE TABLE master (<br>
+           num INT(10),
+           pass VARCHAR(300),<br>
+           PRIMARY KEY(num)<br>
+);</code></pre>
+본 명령어를 통해 mysql에 관리자 정보를 저장하는 master 테이블을 생성합니다.<br>
+본 테이블에는 프로그램의 모든 기능을 관리하는 최고 관리자 등급의 유저 정보를 저장합니다.
+
+<pre><code>CRATE TABLE board (<br>
+           num INT AUTO_INCREMENT,<br>
+           type VARCHAR(20),<br>
+           title VARCHAR(150),<br>
+           content TEXT,<br>
+           PRIMARY KEY(num)<br>
+);</code></pre>
+본 명령어를 통해 mysql에 관리자가 작성한 글을 저장하는 board 테이블을 생성합니다.<br>
+본 테이블에는 관리자가 작성한 글의 제목과 내용 등을 저장합니다.
