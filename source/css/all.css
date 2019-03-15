@@ -25,6 +25,11 @@ header {
     width: 100%;
     display: inline-block;
     height: 150px;
+    list-style: none;
+}
+
+#mobile_menu {
+    display: none;
 }
 
 header > ul > li {
@@ -50,6 +55,26 @@ header > ul > li {
 #menu:hover {
     background-color: white;
     display: inline-block;
+}
+
+@media (max-width: 1070px) {
+    #menu {
+        display: none;
+    }
+
+    #mobile_menu {
+        display: inline-block;
+    }
+
+    #mobile_menu > ul > li {
+        list-style: none;
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    #mobile_menu > ul > li:hover {
+        background-color: white;
+    }
 }
 
 /* a 효과 제거 */

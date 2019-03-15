@@ -42,6 +42,13 @@
                 <li id="menu"><a href="../order/index.html">음악 신청</a></li>
             </ul>
         </header>
+        <div id="mobile_menu">
+            <ul>
+                <li><a href="../order/index.html">음악 신청</a></li>
+                <li><a href="../check/index.html">선정 확인</a></li>
+                <li><a href="../student/index.html">학생 센터</a></li>
+            </ul>
+        </div>
         <div id="div_1">
             <br>
             <br>
@@ -70,7 +77,7 @@
                     <td>제목</td>
                 </tr>
                 <?php
-                $con =mysqli_connect("127.0.0.1", "root", "*******", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");
+                $con =mysqli_connect("127.0.0.1", "root", "*********", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");
                 $sql = "SELECT * FROM board order by num desc";
                 $ret = $con->query($sql);
                 while ($row = $ret->fetch_assoc()) {
