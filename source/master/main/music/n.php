@@ -9,7 +9,7 @@
 
     $number = $_GET['number'];
 
-    $con=mysqli_connect("localhost", "joongi1978", "wnsqpdjtm2", "joongi1978") or die("Error! MySQL Not Connect [code : Mysql-1]");
+    $con=mysqli_connect("127.0.0.1", "root", "*********", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");
     mysqli_query($con, "set session character_set_connection=utf8;");
     mysqli_query($con, "set session character_set_results=utf8;");
     mysqli_query($con, "set session character_set_client=utf8;");
