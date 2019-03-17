@@ -15,7 +15,7 @@ $sql = "CREATE TABLE board
 (
     num INT AUTO_INCREMENT,
     type VARCHAR(20),
-    tutle VARCHAR(150),
+    title VARCHAR(150),
     content TEXT,
     PRIMARY KEY(num)
 );";
