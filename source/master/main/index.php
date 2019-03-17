@@ -12,6 +12,7 @@
     </head>
     <body>
         <?php
+            header("Content-Type: text/html; charset=UTF-8");
             if(!isset($_SESSION['snum'])) {
                 echo "<script>alert('비정상적 접속입니다. 로그인 하십시오.');</script>";
                 echo "<script>window.location.href = '../index.html';</script>";

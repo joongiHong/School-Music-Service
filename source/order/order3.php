@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+    header("Content-Type: text/html; charset=UTF-8");?>
 <html>
     <head>
         <title>고창중학교 음악 신청 서비스 - 음악신청</title>

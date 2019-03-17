@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<?php 
+<?php
+    header("Content-Type: text/html; charset=UTF-8");
     session_start();
 
     $num=$_GET['num']
@@ -30,6 +31,9 @@
             <br>
             <?php
                 $con =mysqli_connect("127.0.0.1", "root", "*******", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");
+                mysqli_query($con, "set session character_set_connection=utf8;");
+                mysqli_query($con, "set session character_set_results=utf8;");
+                mysqli_query($con, "set session character_set_client=utf8;");
                 $sql = "SELECT * FROM board WHERE num=".$num."";
                 $ret = $con->query($sql);
                 while ($row = $ret->fetch_assoc()) {
