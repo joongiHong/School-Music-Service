@@ -60,7 +60,9 @@
             <br>
             <h3>제목&nbsp;&nbsp;|&nbsp;&nbsp;<?php echo $row['title']?></h3>
             <br>
-            <?php echo $row['content']?>
+            <div style="white-space:pre;">
+<?php echo $row['content']?>
+            </div>
                 <?php } ?>
             <br>
         </div>
