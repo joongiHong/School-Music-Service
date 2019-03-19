@@ -85,7 +85,7 @@ Mysql의 root 암호는 추후 관리자 추가 등에 사용됩니다.
 
 #### 2. mysql 관리자 생성
 본 단계를 통하여 각종 셀 입력용 관리자를 생성해야 서버 보안 관리에 안전합니다.<br>
-본 과정에선 생성한 입력(insert) 권환 관리자와 출력(select) 관한 관리자를 추후 4단계에서 권환을 제공합니다.<br>
+본 과정에선 생성한 관리자는 추후에 생성(insert)와 삭제(delete)용도로 사용할 수 있도록 권환을 부여합니다.<br>
 혹시 호스팅 업체에서 관리자 생성 권환 없이 계정 하나만을 제공할 경우 해당 계정과 비밀번호를 5단계에 입력하세요.
 
 <pre><code>mysql -u root -p</code></pre>
@@ -97,10 +97,9 @@ Mysql의 root 암호는 추후 관리자 추가 등에 사용됩니다.
 <pre><code>CREATE user '아이디'@localhost identified by '비밀번호';</code></pre>
 본 명령어를 통해 user 테이블에 아이디와 비밀번호를 가진 관리자를 생성합니다.
 
-<pre><code>CREATE user '아이디'@% identified by '비밀번호';</code></pre>
+<pre><code>CREATE user '아이디'@'%' identified by '비밀번호';</code></pre>
 본 명령어를 통해 방금 전에 생성한 관리자가 외부에서 접속할 수 있도록 설정을 변경합니다.
 <br>
-이 절차를 각 아이디와 비밀번호를 다르게 하여, 2개를 생성합니다.
 
 #### 3. mysql 테이블 생성
 본 단계를 통하여 각종 정보를 업로드 할 테이블을 생성합니다.<br>
@@ -154,63 +153,27 @@ Mysql의 root 암호는 추후 관리자 추가 등에 사용됩니다.
 본 테이블에는 관리자가 작성한 글의 제목과 내용 등을 저장합니다.
 
 #### 4. mysql 관리자 권환 부여
-추가 예정.<br>
+<pre><code>GRANT all privileges on broadcasting.* to id@'%' identified by 'password';</code></pre>
+여기서 broadcasting에는 db 이름을, id에는 아이디를, password에는 비밀번호를 입력하시면 됩니다.
 
 #### 5. 서버 접근을 위한 php 서버 접근 정보 수정
 본 단계는 서비스가 작동하는 중요한 요소 중에 하나인 mysql 접속 정보를 수정합니다.<br>
-다음과 같은 파일에 작성된 파일의 db 접속 정보를 유형에 맞춰 수정하십시오.<br><br>
-
-##### 수정 필요 파일 목록
-Order/<br>
-order2.php<br>
-order4.php<br>
-<br>
-Student/<br>
-index.php<br>
-view.php<br>
-<br>
-Check/<br>
-check1.php<br>
-<br>
-Master/<br>
-login.php<br>
-<br>
-Master/main/music<br>
-index.php<br>
-delete.php<br>
-clean.php<br>
-n.php<br>
-y.php<br>
-<br>
-Master/main/student<br>
-index.php<br>
-out.php<br>
-plus2.php<br>
-<br>
-Master/main/user<br>
-index.php<br>
-out.php<br>
-plus2.php<br>
-<br>
-Master/main/write<br>
-index.php<br>
-delete.php<br>
-clean.php<br>
-update.php<br>
-update2.php<br>
-write2.php<br>
-
-##### 수정 유형
-A. 대부분의 파일의 유형입니다.
-<pre><code>$con =mysqli_connect("127.0.0.1", "root", "*********", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");</code></pre>
-여기서 127.0.0.1은 수정하지 않으시거나, 오류가 발생할 경우 localhost로 변경하시면 됩니다.<br>
-root는 로그인 아이디로, mysql에 로그인할 때 사용하시는 아이디를 입력하시면 됩니다.<br>
-별표로 되어 있는 부분은 비밀번호로 mysql에 로그인할 때 사용하시는 비밀번호를 입력하시면 됩니다.<br>
-boradcasting은 db 이름으로 broadcasting이나 기타 db 이름을 입력하시면 됩니다.
+최상위 디렉토리에 위치한 'dbinfo.php'를 알맞게 수정하시기 바랍니다.<br>
+1. localhost -> 보통 가만히 두어도 되지만 에러시 127.0.0.1 등을 입력하여 보시기 바랍니다.<br>
+2. db 로그인 아이디 -> 2번 항목에서 생성한 관리자의 아이디를 입력합니다.<br>
+3. db 로그인 암호 -> 2번 항목에서 생성한 관리자의 암호를 입력합니다.<br>
+4. db 이름 -> 3단계 테이블 생성에서 데이터베이스를 생성한 경우 broadcasting을 이외에 경우 해당 데이터베이스 이름을 입력하십시오.
 
 #### 6. 각종 기본 기입 사항 변경
+img/logo/logo.png<br>
+500 X 150 사이지의 사진 파일로 변경하시기 바랍니다.<br>
+본 서비스의 로고로 사용됩니다.<br><br>
+order/index.html<br>
+약관을 수정하시기 바랍니다.<br><br>
+타이틀과 각종 안내 사항에 작성되어 있는 학교 이름을 수정하시기 바랍니다.
 
 #### 7. 정상 작동 테스트
+모든 기능들을 순차적으로 테스트하여 보시기 바랍니다.
 
 #### 부록1. 테이블 자동 생성 스크립트
 파트 3에서 진행하는 테이블 생성이 어려우신 분들을 위한 스크립트입니다.<br>
