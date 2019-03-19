@@ -100,6 +100,7 @@
                 ?>
             </table>
             <a href="clean.php" onclick="window.open(this.href, '_blank', 'width=800px,height=500px,toolbars=no,scrollbars=no'); return false;"><button style="font-size:15px;">순번 초기화</button></a>
+            <a href="excel.php" onclick="window.open(this.href, '_blank', 'width=800px,height=500px,toolbars=no,scrollbars=no'); return false;"><button style="font-size:15px;">엑셀 저장</button></a>
         </div>
     </body>
 </html>
