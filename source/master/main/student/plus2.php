@@ -1,9 +1,10 @@
 <?php
+Require $_SERVER["DOCUMENT_ROOT"]."/dbinfo.php";
+
 header("Content-Type: text/html; charset=UTF-8");
 $snum=$_POST['studentnum'];
 $sname=$_POST['name'];
 
-$con=mysqli_connect("127.0.0.1", "root", "*********", "broadcasting") or die("Error! MySQL Not Connect [code : Mysql-1]");
 mysqli_query($con, "set session character_set_connection=utf8;");
 mysqli_query($con, "set session character_set_results=utf8;");
 mysqli_query($con, "set session character_set_client=utf8;");
