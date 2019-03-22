@@ -8,12 +8,13 @@ header( "Content-Disposition: attachment; filename = music.xls" );
 header( "Content-Description: PHP4 Generated Data" );
 
 $EXCEL_STR = "
-<table border='1'>
+<table>
 <tr>
     <td>순번</td>
     <td>제목</td>
     <td>가수</td>
     <td>앨범</td>
+    <td>선정여부</td>
 </tr>";
 
 mysqli_query($con, "set session character_set_connection=utf8;");
@@ -28,6 +29,7 @@ $EXCEL_STR .="
     <td>".$row['name']."</a></td>
     <td>".$row['singer']."</td>
     <td>".$row['album']."</td>
+    <td>".$row['sf']."</td>
 </tr>
 ";
 }
