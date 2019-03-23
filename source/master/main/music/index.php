@@ -29,7 +29,7 @@
             }
 
             td:nth-child(2) {
-                width: 35%
+                width: 30%
             }
 
             td:nth-child(3) {
@@ -41,6 +41,10 @@
             }
             
             td:nth-child(5) {
+                width: 5%
+            }
+            
+            td:nth-child(6) {
                 width: 10%
             }
         </style>
@@ -75,6 +79,7 @@
                     <td>제목</td>
                     <td>가수</td>
                     <td>앨범</td>
+                    <td>여부</td>
                     <td>결과 전송</td>
                 </tr>
                 <?php
@@ -92,6 +97,7 @@
                     <td><a href="https://music.bugs.co.kr/search/integrated?q=<?php echo $row['name']?>" target="_blank"><?php echo $row['name']?></a></td>
                     <td><?php echo $row['singer']?></td>
                     <td><?php echo $row['album']?></td>
+                    <td><?php echo $row['sf']?></td>
                     <td><a href="y.php?number=<?php echo $row['number']?>">선정</a> | <a href="n.php?number=<?php echo $row['number']?>">탈락</a> | <a href="delete.php?number=<?php echo $row['number']?>">삭제</a></td> 
                 </tr>
 
@@ -99,6 +105,7 @@
                 }
                 ?>
             </table>
+            <p>※ 여부에서 Y는 선정, N은 탈락, O은 심사중을 뜻합니다.</p>
             <a href="clean.php" onclick="window.open(this.href, '_blank', 'width=800px,height=500px,toolbars=no,scrollbars=no'); return false;"><button style="font-size:15px;">순번 초기화</button></a>
             <a href="excel.php" onclick="window.open(this.href, '_blank', 'width=800px,height=500px,toolbars=no,scrollbars=no'); return false;"><button style="font-size:15px;">엑셀 저장</button></a>
         </div>
