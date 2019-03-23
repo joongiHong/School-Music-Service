@@ -31,9 +31,26 @@ if($ret) {
     if($count==1) {
         echo "<script>window.location.href = 'check_o.html';</script>";
         exit;
-    }else{
+    }
+}else {
+    echo "<script>alert('Error! MySQL unknow error [code : Mysql-3]');</script>";
+    echo "<script>history.back();</script>";
+    exit;
+}
+
+mysqli_query($con, "set session character_set_connection=utf8;");
+mysqli_query($con, "set session character_set_results=utf8;");
+mysqli_query($con, "set session character_set_client=utf8;");
+$sql ="SELECT * FROM music WHERE name='".$music."' AND singer='".$singer."' AND sf='N';";
+$ret = mysqli_query($con, $sql);
+if($ret) {
+    $count = mysqli_num_rows($ret);
+    if($count==1) {
         echo "<script>window.location.href = 'check_n.html';</script>";
-        exit; 
+        exit;
+    }else{
+        echo "<script>window.location.href = 'check_f.html';</script>";
+        exit;
     }
 }else {
     echo "<script>alert('Error! MySQL unknow error [code : Mysql-3]');</script>";
