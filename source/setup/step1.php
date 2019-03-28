@@ -23,6 +23,8 @@
         <div style="text-algin: left;">
         <form action="step2.php" method="POST">
             <h1 style="font-size: 50px;">Step1</h1>
+            <h1>DB와 연동</h1>
+            <hr>
             <h2>DB 정보 입력</h2>
             <label for="dburl">DB 주소</label>&nbsp;&nbsp;
             <input type="text" id="dburl" name="dburl" class="input" value="localhost">

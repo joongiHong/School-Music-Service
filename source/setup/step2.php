@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
+
 $is_file_exist = file_exists("../dbinfo.php");
 
 if ($is_file_exist) {
@@ -153,7 +155,6 @@ if (mysqli_query($conn,$sql)){
 echo "<script>alert('에러 발생! 스크립트 수정 요망!')</script>";
 exit;
 };
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -161,20 +162,50 @@ exit;
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <title>서비스 설치 - 성공</title>
+        <title>서비스 설치 - Step2</title>
+        <style>
+            textarea {
+                width: 500px;
+                height: 200px;
+            }
+        </style>
     </head>
     <body>
         <div id="logo">
             <img src="logo.png">
         </div>
-        <div style="text-algin: center;">
-            <h1>설치 완료!</h1>
-            <h3>다음과 같은 작업을 완료하였습니다.</h3>
+        <div style="text-algin: left;">
+        <form action="step3.php" method="POST">
+            <h1 style="font-size: 50px;">Step2</h1>
+            <h1>기본 작성 정보</h1>
+            <hr>
+            <h2>학교 정보 입력</h2>
+            <label for="schoolname">학교 이름</label>&nbsp;&nbsp;
+            <input type="text" id="schoolname" name="schoolname" class="input">
             <br>
-            <p>1. dbinfo.php 생성 완료</p>
-            <p>2. 테이블 생성 완료</p>
-            <p>3. 테이블 인코딩 변경 완료</p>
-            <p>4. 테스트 용 관리자, 학생 추가 완료</p>
+            <br>
+            <label for="pp">개인정보처리방침</label>&nbsp;&nbsp;
+            <textarea id="pp" name="pp">
+안내 : 본 이용약관은 각 학교에서 수정하여 사용하시기 바랍니다.
+
+※ 개인정보 처리 방침 ※
+
+- 개인정보 처리 내역
+1. 수집이용목적 : 고내 방송 선호 음악 신청 민원 처리 및 통지
+2. 수집항목 : 학번, 성명
+3. 이용 및 보유기간 : 본인인증 후 즉시 파기
+4. 동의를 거부할 수 있으며, 동의를 거부하시는 경우 본인인증이 불가하여 신청이 불가능 합니다.
+
+- 개인정보 보호 책임자
+1. 이름 : OOO
+2. 직책 : 방송부 총괄 선생 겸 교무부장
+3. 연락처 : 010-0000-0000
+4. 민원 고충이 발생할 경우 본 연락처나 학교로 연락주십시오.
+            </textarea>
+            <br>
+            <br>
+            <button type="submit">완료</button>
+        </form>
         </div>
     </body>
 </html>
