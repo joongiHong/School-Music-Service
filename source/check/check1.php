@@ -12,7 +12,7 @@ $ret = mysqli_query($con, $sql);
 if($ret) {
     $count = mysqli_num_rows($ret);
     if($count==1) {
-        echo "<script>window.location.href = 'check_y.html';</script>";
+        echo "<script>window.location.href = 'check_y.php';</script>";
         exit;
     }
 }else {
@@ -29,7 +29,7 @@ $ret = mysqli_query($con, $sql);
 if($ret) {
     $count = mysqli_num_rows($ret);
     if($count==1) {
-        echo "<script>window.location.href = 'check_o.html';</script>";
+        echo "<script>window.location.href = 'check_o.php';</script>";
         exit;
     }
 }else {
@@ -46,10 +46,10 @@ $ret = mysqli_query($con, $sql);
 if($ret) {
     $count = mysqli_num_rows($ret);
     if($count==1) {
-        echo "<script>window.location.href = 'check_n.html';</script>";
+        echo "<script>window.location.href = 'check_n.php';</script>";
         exit;
     }else{
-        echo "<script>window.location.href = 'check_f.html';</script>";
+        echo "<script>window.location.href = 'check_f.php';</script>";
         exit;
     }
 }else {
