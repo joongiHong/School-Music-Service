@@ -15,7 +15,7 @@ $ret = mysqli_query($con, $sql);
 if($ret) {
     session_start();
     session_destroy();
-    echo "<script>window.location.href = 'order5.html';</script>";
+    echo "<script>window.location.href = 'order5.php';</script>";
 }
 else {
     echo "<script>alert('Error! MySQL Fail [code : Mysql-2]');</script>";
