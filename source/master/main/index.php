@@ -41,8 +41,25 @@ Require $_SERVER["DOCUMENT_ROOT"]."/dbinfo.php";
                 margin: 0;
             }
         </style>
+        <script>
+        function times() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML =
+            h + ":" + m + ":" + s;
+            var t = setTimeout(times, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};
+            return i;
+        }
+        </script>
     </head>
-    <body>
+    <body onload="times()>
         <?php
             header("Content-Type: text/html; charset=UTF-8");
             if(!isset($_SESSION['snum'])) {
@@ -66,6 +83,9 @@ Require $_SERVER["DOCUMENT_ROOT"]."/dbinfo.php";
             <h3>메인 패널로 각종 정보와 동작 사항을 확인할 수 있습니다.</h3>
             <br>
             <hr>
+            <br>
+            <h1>현재 시각</h1>
+            <h1 style="font-size: 100px;" id="time"></h1>
             <br>
             <h1>서버 상태</h1>
             <br>
