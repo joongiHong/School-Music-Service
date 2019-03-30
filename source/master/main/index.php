@@ -2,6 +2,7 @@
 <?php 
 session_start();
 Require $_SERVER["DOCUMENT_ROOT"]."/serviceinfo.php"; 
+Require $_SERVER["DOCUMENT_ROOT"]."/dbinfo.php";
 ?>
 <html>
     <head>
@@ -12,6 +13,34 @@ Require $_SERVER["DOCUMENT_ROOT"]."/serviceinfo.php";
         <link rel="stylesheet" href="../../css/order.css" type="text/css">
         <link rel="stylesheet" href="../../css/textbox.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <style>
+            tr {
+                padding: 0;
+                border: 0;
+            }
+
+            td {
+                padding: 0;
+                border: 0;
+            }
+
+            td:nth-child(1) {
+                width: 100px;
+            }
+
+            td:nth-child(2) {
+                width: 5px;
+            }
+
+            td:nth-child(3) {
+                width: 100px;
+                text-align: right;
+            }
+
+            #maginzero {
+                margin: 0;
+            }
+        </style>
     </head>
     <body>
         <?php
@@ -37,6 +66,34 @@ Require $_SERVER["DOCUMENT_ROOT"]."/serviceinfo.php";
             <h3>메인 패널로 각종 정보와 동작 사항을 확인할 수 있습니다.</h3>
             <br>
             <hr>
+            <br>
+            <h1>서버 상태</h1>
+            <br>
+            <h2>DB</h2>
+            <br>
+            <table>
+                <tr>
+                    <td><p id="maginzero">학생 DB</p></td>
+                    <td> | </td>
+                    <td><p id="maginzero"><?php $sql = "SHOW TABLES LIKE 'studentdoc'"; $ret = mysqli_query($con, $sql); $row = mysqli_fetch_array($ret); if($row == true){echo '<span style="color: blue;" title="테이블이 존재하며, 정상 작동중입니다."><i class="far fa-check-circle"></i> 작동중</span>'; }else{echo '<span style="color: red;" title="테이블이 존재하지 않습니다. 학생 확인이 불가능 합니다."><i class="fas fa-times"></i> 작동 실패</span>'; }; ?></p></td>
+                </tr>
+                <tr>
+                    <td><p id="maginzero">관리자 DB</p></td>
+                    <td> | </td>
+                    <td><p id="maginzero"><?php $sql = "SHOW TABLES LIKE 'master'"; $ret = mysqli_query($con, $sql); $row = mysqli_fetch_array($ret); if($row == true){echo '<span style="color: blue;" title="테이블이 존재하며, 정상 작동중입니다."><i class="far fa-check-circle"></i> 작동중</span>'; }else{echo '<span style="color: red;" title="테이블이 존재하지 않습니다. 관리자 로그인이 불가능 합니다."><i class="fas fa-times"></i> 작동 실패</span>'; }; ?></p></td>
+                </tr>
+                <tr>
+                    <td><p id="maginzero">신청목록 DB</p></td>
+                    <td> | </td>
+                    <td><p id="maginzero"><?php $sql = "SHOW TABLES LIKE 'music'"; $ret = mysqli_query($con, $sql); $row = mysqli_fetch_array($ret); if($row == true){echo '<span style="color: blue;" title="테이블이 존재하며, 정상 작동중입니다."><i class="far fa-check-circle"></i> 작동중</span>'; }else{echo '<span style="color: red;" title="테이블이 존재하지 않습니다. 신청 목록 확인과 신청이 불가능 합니다."><i class="fas fa-times"></i> 작동 실패</span>'; }; ?></p></td>
+                </tr>
+                <tr>
+                    <td><p id="maginzero">게시판 DB</p></td>
+                    <td> | </td>
+                    <td><p id="maginzero"><?php $sql = "SHOW TABLES LIKE 'board'"; $ret = mysqli_query($con, $sql); $row = mysqli_fetch_array($ret); if($row == true){echo '<span style="color: blue;" title="테이블이 존재하며, 정상 작동중입니다."><i class="far fa-check-circle"></i> 작동중</span>'; }else{echo '<span style="color: red;" title="테이블이 존재하지 않습니다. 게시판 사용이 불가능 합니다."><i class="fas fa-times"></i> 작동 실패</span>'; }; ?></p></td>
+                </tr>
+            </table>     
+            <br>
             <br>
             <h1>버전 정보</h1>
             <p>Beta 3 (불안정한 버전으로 문제가 발생할 수 있습니다.)</p>
