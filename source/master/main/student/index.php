@@ -2,10 +2,11 @@
 <?php 
     header("Content-Type: text/html; charset=UTF-8");
     session_start();
+    Require $_SERVER["DOCUMENT_ROOT"]."/serviceinfo.php"; 
 ?>
 <html>
     <head>
-        <title>고창중학교 음악 신청 서비스 - 관리자</title>
+        <title><?php echo $schoolname ?> 음악 신청 서비스 - 관리자</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../../../css/master.css" type="text/css">
         <link rel="stylesheet" href="../../../css/button.css" type="text/css">
