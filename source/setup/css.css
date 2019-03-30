@@ -1,0 +1,62 @@
+/* 폰트 선언 */
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+* { 
+    font-family: 'Nanum Gothic', 'Sans-serif'; 
+}
+
+/* 보더 마진 초기화 */
+
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* 인풋 디자인 */
+.input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-color: purple;
+    background-color: #EAEAEA;
+}
+
+/* 로고 */
+#logo {
+    text-align: center;
+}
+
+/* 본문 */
+#info {
+    background-color: #EAEAEA;
+    padding: 15px;
+    overflow: auto;
+}
+
+#info > h1 {
+    margin: 0;
+}
+
+#info > button {
+    float: right;
+}
+
+form > button {
+    float: right;
+}
+
+/* 버튼 */
+button {
+    border: 0;
+    background-color: purple;
+    color: white;
+    padding: 10px;
+}
+
+/* 추가 정보 */
+#plusinfo {
+    background-color: gray;
+    padding: 5px;
+    margin: 10px;
+}
