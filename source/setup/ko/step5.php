@@ -26,6 +26,9 @@ fwrite($newfile, $txt);
 $txt = ' $pp="'.$pp.'";';
 fwrite($newfile, $txt);
 
+$txt = ' $font="nanum";';
+fwrite($newfile, $txt);
+
 $txt = ' ?>';
 fwrite($newfile, $txt);
 ?>
