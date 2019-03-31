@@ -59,7 +59,7 @@ Require $_SERVER["DOCUMENT_ROOT"]."/dbinfo.php";
         }
         </script>
     </head>
-    <body onload="times()>
+    <body onload="times()">
         <?php
             header("Content-Type: text/html; charset=UTF-8");
             if(!isset($_SESSION['snum'])) {
