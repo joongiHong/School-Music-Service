@@ -74,6 +74,7 @@ Require $_SERVER["DOCUMENT_ROOT"]."/dbinfo.php";
                 <li title="관리자 관리"><a href="user/index.php"><span style="color: gray;"><i class="fas fa-user-check fa-3x"></i></span></a></li>
                 <li title="학생 관리"><a href="student/index.php"><span style="color: gray;"><i class="fas fa-user-graduate fa-3x"></i></span></a></li>
                 <li title="글쓰기"><a href="write/index.php"><span style="color: gray;"><i class="fas fa-pen fa-3x"></i></span></a></li>
+                <li title="설정"><a href="setting/index.php"><span style="color: gray;"><i class="fas fa-cogs fa-3x"></i></span></a></li>
                 <li title="로그아웃"><a href="../logout.php"><span style="color: gray;"><i class="fas fa-sign-out-alt fa-3x"></i></span></a></li>
             </ul>
         </header>

@@ -13,31 +13,6 @@
         <link rel="stylesheet" href="../../../css/order.css" type="text/css">
         <link rel="stylesheet" href="../../../css/textbox.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <style>
-            table {
-                width: 100%;
-                border-top: 1px solid gray;
-                border-collapse: collapse;
-            }
-
-            th, td {
-                border-bottom: 1px solid gray;
-                padding: 5px;
-            }
-
-            td:nth-child(1) {
-                width: 5%
-            }
-
-            td:nth-child(2) {
-                width: 40%
-            }
-
-            td:nth-child(3) {
-                width: 30%
-            }
-            
-        </style>
     </head>
     <body>
         <?php
@@ -58,39 +33,12 @@
             </ul>
         </header>
         <div id="main">
-        <h1 style="font-size: 70px;">관리자 관리</h1>
+            <h1 style="font-size: 70px;">환경설정</h1>
             <br>
-            <h3>음악 신청 서비스의 전반적인 기능을 관리할 수 있는 관리자 권환 설정 기능입니다.</h3>
+            <h3>음악 신청 서비스의 전반적인 설정 사항을 변경할 수 있습니다.</h3>
             <br>
             <hr>
             <br>
-            <table>
-                <tr style="background-color: white;">
-                    <td>학번</td>
-                    <td>비밀번호</td>
-                    <td>관한 설정</td>
-                </tr>
-                <?php
-                Require $_SERVER["DOCUMENT_ROOT"]."/dbinfo.php";
-                mysqli_query($con, "set session character_set_connection=utf8;");
-                mysqli_query($con, "set session character_set_results=utf8;");
-                mysqli_query($con, "set session character_set_client=utf8;");
-                $sql = "SELECT * FROM master order by num desc";
-                $ret = $con->query($sql);
-                while ($row = $ret->fetch_assoc()) {
-                ?>
-                
-                <tr>
-                    <td><?php echo $row['num']?></td>
-                    <td><?php echo $row['pass']?></td>
-                    <td><a href="out.php?num=<?php echo $row['num']?>">권환 박탈</a></td> 
-                </tr>
-
-                <?php
-                }
-                ?>
-            </table>
-            <a href="plus.php" onclick="window.open(this.href, '_blank', 'width=500px,height=320px,toolbars=no,scrollbars=no'); return false;"><button style="font-size:15px;">관리자 추가</button></a>
         </div>
     </body>
 </html>
