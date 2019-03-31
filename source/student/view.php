@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../css/button.css" type="text/css">
         <link rel="stylesheet" href="../css/order.css" type="text/css">
         <link rel="stylesheet" href="../css/textbox.css" type="text/css">
+        <link rel="stylesheet" href="../css/font/<?php echo $font ?>.css" type="text/css">
     </head>
     <body>
         <header>

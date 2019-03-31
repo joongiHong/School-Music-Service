@@ -9,6 +9,7 @@ Require $_SERVER["DOCUMENT_ROOT"]."/serviceinfo.php";
         <link rel="stylesheet" href="../css/all.css" type="text/css">
         <link rel="stylesheet" href="../css/button.css" type="text/css">
         <link rel="stylesheet" href="../css/order.css" type="text/css">
+        <link rel="stylesheet" href="../css/font/<?php echo $font ?>.css" type="text/css">
         <script language="JavaScript" type="text/JavaScript">
             function agree(){
                 var yn=window.confirm('개인정보 처리 방침에 동의하신 것으로 간주하고\n가입을 진행합니다.');

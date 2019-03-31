@@ -10,6 +10,7 @@ Require $_SERVER["DOCUMENT_ROOT"]."/serviceinfo.php";
         <link rel="stylesheet" href="../css/master.css" type="text/css">
         <link rel="stylesheet" href="../css/button.css" type="text/css">
         <link rel="stylesheet" href="../css/textbox.css" type="text/css">
+        <link rel="stylesheet" href="../css/font/<?php echo $font ?>.css" type="text/css">
     </head>
     <body>
         <div id="box">
