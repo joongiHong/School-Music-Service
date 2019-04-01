@@ -42,6 +42,7 @@
             <hr>
             <br>
             <h2>폰트 설정</h2>
+            <p>서비스에 적용될 폰트를 수정할 수 있습니다. 각 항목에 폰트별로 예시가 보여집니다.</p>
             <br>
             <form action="font.php" method="post">
                 <select name="font" style="margin: 1px; padding: 5px 10px; background-color: #F29661; border: 1px solid gray;">
