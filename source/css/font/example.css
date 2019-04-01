@@ -1,10 +1,10 @@
 @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css); 
-#nanum { 
+#jeju { 
     font-family: 'Jeju Myeongjo', sans-serif; 
 }
 
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
-#jeju {
+#nanum {
     font-family: 'Nanum Gothic', sans-serif;
 }
 
