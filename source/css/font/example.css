@@ -1,0 +1,14 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css); 
+#nanum { 
+    font-family: 'Jeju Myeongjo', sans-serif; 
+}
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+#jeju {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+@font-face { font-family: 'GoyangDeogyang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangDeogyang.woff') format('woff'); font-weight: normal; font-style: normal; }
+#deogyang {
+    font-family: 'GoyangDeogyang', sans-serif;
+}
