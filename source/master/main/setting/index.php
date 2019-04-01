@@ -46,10 +46,10 @@
             <br>
             <form action="font.php" method="post">
                 <select name="font" style="margin: 1px; padding: 5px 10px; background-color: #F29661; border: 1px solid gray;">
-                    <option value="">폰트 선택</option>
-                    <option value="nanum" id="nanum">나눔글꼴</option>
-                    <option value="jeju" id="jeju">제주명조</option>
-                    <option value="deogyang" id="deogyang">고양덕양체</option>
+                    <option value="">폰트 선택 - 예시</option>
+                    <option value="nanum" id="nanum">나눔글꼴 - 다람쥐 헌 쳇바퀴에 타고파</option>
+                    <option value="jeju" id="jeju">제주명조 - 다람쥐 헌 쳇바퀴에 타고파</option>
+                    <option value="deogyang" id="deogyang">고양덕양체 - 다람쥐 헌 쳇바퀴에 타고파</option>
                 </select>
                 <input type="submit" value="설정" style="background-color: #A566FF; border: 0; padding: 5px 10px;">
             </form>
