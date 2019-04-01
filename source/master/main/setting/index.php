@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../../../css/order.css" type="text/css">
         <link rel="stylesheet" href="../../../css/textbox.css" type="text/css">
         <link rel="stylesheet" href="../../../css/font/<?php echo $font ?>.css" type="text/css">
+        <link rel="stylesheet" href="../../../css/font/example.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
     <body>
@@ -40,6 +41,17 @@
             <br>
             <hr>
             <br>
+            <h2>폰트 설정</h2>
+            <br>
+            <form action="font.php" method="post">
+                <select name="font" style="margin: 1px; padding: 5px 10px; background-color: #F29661; border: 1px solid gray;">
+                    <option value="">폰트 선택</option>
+                    <option value="nanum" id="nanum">나눔글꼴</option>
+                    <option value="jeju" id="jeju">제주명조</option>
+                    <option value="deogyang" id="deogyang">고양덕양체</option>
+                </select>
+                <input type="submit" value="설정" style="background-color: #A566FF; border: 0; padding: 5px 10px;">
+            </form>
         </div>
     </body>
 </html>
