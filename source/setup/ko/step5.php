@@ -20,13 +20,13 @@ $newfile = fopen("../../serviceinfo.php", "w") or die("<script>alert('serviceinf
 $txt = '<?php';
 fwrite($newfile, $txt);
 
+$txt = ' Require $_SERVER["DOCUMENT_ROOT"]."/font.php";';
+fwrite($newfile, $txt);
+
 $txt = ' $schoolname="'.$schoolname.'";';
 fwrite($newfile, $txt);
 
 $txt = ' $pp="'.$pp.'";';
-fwrite($newfile, $txt);
-
-$txt = ' $font="nanum";';
 fwrite($newfile, $txt);
 
 $txt = ' ?>';
