@@ -10,7 +10,7 @@ Require $_SERVER["DOCUMENT_ROOT"]."/serviceinfo.php";
         <link rel="stylesheet" href="../css/font/<?php echo $font ?>.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
-    <body>
+    <body id="login_body">
         <div id="login" style="text-align: center;">
             <span style="color: white;"><i class="fas fa-key fa-5x"></i></span>
             <form action="login.php" method="POST">
