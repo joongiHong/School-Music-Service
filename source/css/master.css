@@ -1,71 +1,437 @@
-/* a 효과 제거 */
+/* 
+
+기본 선언 부문 
+
+*/
 
 a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
-
+  
 a:visited {
-  color: black;
-  text-decoration: none;
-}
-
+    color: black;
+    text-decoration: none;
+  }
+  
 a:link {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
-
+  
 a:hover {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
-/* 보더, 마진 제로 */
-
-body {
-    border: 0;
-    margin: 0;
-    background-color: #F29661;
-}
-
-h1, h2, h3, h4, h5, h6 {
+* {
     margin: 0;
     padding: 0;
 }
 
+/* 
 
-#box {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 500px;
-  height: 300px;
-  background: #CEECF5;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
+공통 디자인 부문 
+
+*/
+
+body {
+    background-color: rgb(246, 246, 246);
 }
 
-/* 메뉴 */
-header > ul {
-  position: fixed;
+header {
+    background-color: #7F7F7F;
+    padding: 10px;
 }
 
-header > ul > li {
-  list-style: none;
-  padding: 10px;
-  width: 60px;
-  background-color: white;
-  text-align: center;
+header > h1 {
+    color: white;
 }
 
-header > ul > li:hover {
-  background-color: aquamarine;
+/* 메뉴 부문 */
+
+.body > .menu {
+    margin: 30px; 
 }
 
-/* 메인 */
-#main {
-  padding: 30px 150px;
+.body > .menu > ul {
+    position: fixed;
+}
+  
+.body > .menu > ul > li {
+    list-style: none;
+    padding: 10px;
+    width: 60px;
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+}
+  
+.body > .menu > ul > li:hover {
+    background-color: rgb(246, 246, 246);
+}
+
+/* 유저 박스 부문 */
+
+.body > .userbox {
+    float: right;
+    background-color: rgb(217, 217, 217);
+    margin: 10px 30px;
+    padding: 15px;
+}
+
+.body > .userbox > .usernum > h2 {
+    display: inline-block;
+    color: white;
+}
+
+.body > .userbox > .usernum > h3 {
+    color: black;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.body > .userbox > hr {
+    background-color: white;
+    border: 0;
+    height: 1px;
+}
+
+/* 본문 부문 */
+
+.body > .content {
+    padding: 0 150px;
+}
+
+.body > .content > h1 {
+    font-size: 50px;
+}
+
+.body > .content > hr {
+    background-color: rgb(217, 217, 217);
+    border: 0;
+    height: 1px;
+}
+
+/* 모듈 내용 */
+
+.module {
+    background-color: rgb(217, 217, 217);
+    padding: 10px;
+}
+
+.module > hr {
+    background-color: rgb(246, 246, 246);
+    width: 100%;
+    height: 1px;
+    border: 0;
+    margin: 1px;
+}
+
+.module_small {
+    background-color: rgb(217, 217, 217);
+    padding: 10px;
+    width: 80%;
+}
+
+.module_small > hr {
+    background-color: rgb(246, 246, 246);
+    width: 100%;
+    height: 1px;
+    border: 0;
+    margin: 1px;
+}
+
+/*
+
+로그인 페이지 부문
+
+*/
+
+#login {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    background-color: rgb(217, 217, 217);
+    padding: 10px;
+}
+
+/*
+
+대시보드 부문
+
+*/
+
+/* 계기판 내용*/
+
+.count {
+    width: 300px;
+    background-color: gray;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
+.count > p {
+    color: white;
+}
+
+.count > h1 {
+    color: white;
+}
+
+/* 서버 상태 */
+
+.server {
+    background-color: rgb(246, 246, 246);
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.server > p {
+    display: inline;
+}
+
+.server > span {
+    float: right;
+}
+
+.server > i {
+    display: inline;
+}
+
+/*
+
+신청목록 부문
+
+*/
+
+/* 테이블 */
+
+.m_table {
+    margin: 10px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.m_table > tbody > tr > td {
+    padding: 5px;
+}
+
+.m_table > tbody > tr > td:nth-child(1) {
+    width: 5%;
+}
+
+.m_table > tbody > tr > td:nth-child(2) {
+    width: 25%;
+}
+
+.m_table > tbody > tr > td:nth-child(3) {
+    width: 25%;
+}
+
+.m_table > tbody > tr > td:nth-child(4) {
+    width: 25%;
+}
+
+.m_table > tbody > tr > td:nth-child(5) {
+    width: 10%;
+}
+
+.m_table > tbody > tr > td:nth-child(6) {
+    width: 10%;
+}
+
+/*
+
+학생목록 부문
+
+*/
+
+/* 테이블 */
+
+.s_table {
+    margin: 10px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.s_table > tbody > tr > td {
+    padding: 5px;
+}
+
+.s_table > tbody > tr > td:nth-child(1) {
+    width: 30%;
+}
+
+.s_table > tbody > tr > td:nth-child(2) {
+    width: 50%;
+}
+
+.s_table > tbody > tr > td:nth-child(3) {
+    width: 10%;
+}
+
+/*
+
+관리자 목록 부문
+
+*/
+
+/* 테이블 */
+
+.ms_table {
+    margin: 10px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.ms_table > tbody > tr > td {
+    padding: 5px;
+}
+
+.ms_table > tbody > tr > td:nth-child(1) {
+    width: 30%;
+}
+
+.ms_table > tbody > tr > td:nth-child(2) {
+    width: 50%;
+}
+
+.ms_table > tbody > tr > td:nth-child(3) {
+    width: 10%;
+}
+
+/*
+
+게시판 부문
+
+*/
+
+/* 테이블 */
+
+.b_table {
+    margin: 10px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.b_table > tbody > tr > td {
+    padding: 5px;
+}
+
+.b_table > tbody > tr > td:nth-child(1) {
+    width: 10%;
+}
+
+.b_table > tbody > tr > td:nth-child(2) {
+    width: 20%;
+}
+
+.b_table > tbody > tr > td:nth-child(3) {
+    width: 50%;
+}
+
+.b_table > tbody > tr > td:nth-child(4) {
+    width: 30%;
+}
+
+/*
+
+폼 디자인
+
+*/
+
+/* 텍스트 박스 */
+
+.textbox1 {
+    float: center;
+    margin: 10px;
+    border-style: none;
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+}
+
+.textbox2 {
+    float: center;
+    margin: 10px;
+    border-style: none;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+}
+
+.textbox3 {
+    margin: 10px;
+    border-style: none;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+}
+
+.textbox4 {
+    margin: 10px;
+    border-style: none;
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+}
+
+/* 버튼 */
+
+.button1 {
+    float: center;
+    margin: 5px;
+    padding: 10px;
+    background-color: #B2EBF4;
+    border: 0;
+    text-align: center;
+    width: 260px;
+    height: 40px;
+    color: white;
+}
+
+.button2 {
+    background-color: white;
+    border: 0;
+    padding: 5px;
+}
+
+.button3 {
+    background-color: white;
+    border: 0;
+    padding: 15px;
+    width: 100px;
+}
+
+/* 텍스트 에이리어 */
+
+.textarea1 {
+    width: 100%;
+    height: 500px;
+    resize: none;
+}
+
+/* 리스트박스 */
+
+.select1 {
+    padding: 5px;
+    margin: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid white;
+    border-radius: 0px;
+    background: url(../img/background/caret-down-solid.svg) no-repeat 95% 50%;
+}
+
+.select1::-ms-expand {
+    display: none;
 }
