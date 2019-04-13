@@ -85,7 +85,7 @@ Require $_SERVER["DOCUMENT_ROOT"]."/dbinfo.php";
                     <br>
                     <br>
                     <p>서비스 버전</p>
-                    <h1>Beta 3</h1>
+                    <h1>1.0.0</h1>
                 </div>
                 <br>
                 <br>
