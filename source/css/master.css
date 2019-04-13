@@ -147,6 +147,10 @@ header > h1 {
 
 */
 
+#login_body {
+    background-image: url(../img/background/login.jpg)
+}
+
 #login {
     position: absolute;
     top: 0;
