@@ -26,10 +26,10 @@ if($ret) {
     session_start();
     session_destroy();
     echo "<script>alert('정상 게시되었습니다.');</script>";
-    echo "<script>self.close()</script>";
+    echo "<script>location.href='index.php'</script>";
 }
 else {
     echo "<script>alert('Error! MySQL Fail [code : Mysql-2]');</script>";
-    echo "<script>self.close()</script>";
+    echo "<script>location.href='index.php'</script>";
 }
 ?>

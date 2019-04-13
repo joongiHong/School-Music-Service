@@ -6,28 +6,18 @@ Require $_SERVER["DOCUMENT_ROOT"]."/serviceinfo.php";
     <head>
         <title><?php echo $schoolname ?> 음악 신청 서비스 - 관리자</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/all.css" type="text/css">
         <link rel="stylesheet" href="../css/master.css" type="text/css">
-        <link rel="stylesheet" href="../css/button.css" type="text/css">
-        <link rel="stylesheet" href="../css/textbox.css" type="text/css">
         <link rel="stylesheet" href="../css/font/<?php echo $font ?>.css" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
     <body>
-        <div id="box">
-            <h1 style="text-align: center;">관리자 로그인</h1>
-            <br>
-            <hr width="50%">
-            <br>
+        <div id="login" style="text-align: center;">
+            <span style="color: white;"><i class="fas fa-key fa-5x"></i></span>
             <form action="login.php" method="POST">
-                <div class="textbox2">
-                    <label for="studentnum">학번</label>&nbsp;&nbsp;
-                    <input type="number" id="studentnum" name="studentnum">
-                </div>
-                <div class="textbox2">
-                    <label for="password">암호</label>&nbsp;&nbsp;
-                    <input type="password" id="password" name="password">
-                </div>
-                <button type="submit" class="btn-2" style="font-size: 15px;">로그인</button>
+            <br>
+                <input type="number" name="studentnum" class="textbox1" placeholder="학번" title="학번">
+                <input type="password" name="password" class="textbox1" placeholder="비밀번호" title="비밀번호"><br>
+                <button type="submit" class="button1">로그인</button>
             </form>
         </div>
     </body>
