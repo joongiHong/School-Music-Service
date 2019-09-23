@@ -1,3 +1,9 @@
+| ![iconfinder_warning-outline_3017950](https://user-images.githubusercontent.com/23215270/65427420-3b490500-de4d-11e9-820c-d62cec792c94.png)<br/>*개발 중단 안내*  |
+|---|
+| 본 프로젝트는 종료되었습니다!<br/>더 이상 지원 및 업데이트는 이루어지지 않습니다.<br/>본 readme 파일도 업데이트되지 않으므로 아래 내용이 부정확할 수 있습니다.<br/>이슈리포트도 받지 않으므로, 이메일로 연락바랍니다.<br/>**새로운 프로젝트로 찾아뵙게 될 때도 만날 수 있길 바랍니다.**| 
+
+<br/>
+
 **본 프로그램에 적힌 학교 명이나 규칙은 모두 사실과 다릅니다.**
 <br/>
 ![로고](https://user-images.githubusercontent.com/23215270/54862456-9440bf00-4d7e-11e9-8deb-d8ea026524f4.png)<br>
